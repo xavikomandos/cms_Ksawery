@@ -10,7 +10,7 @@ h1 {
     text-align: center;
 }
 div#post {
-    background-color: lightgray;
+    background-color: rgb(211, 211, 211);
     padding: 20px;
     margin-bottom: 20px;
 }
