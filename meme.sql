@@ -41,10 +41,10 @@ CREATE TABLE `post` (
 --
 
 INSERT INTO `post` (`id`, `filename`, `timestamp`, `title`, `authorId`, `removed`) VALUES
-(1, '2023-04-19 15:11:55', '0000-00-00', 'Pan Zawadzki jet super gość', 1, 0),
-(2, '2023-04-19 15:13:00', '0000-00-00', 'Pan Zawadzki jet super gość', 1, 0),
-(3, '2023-04-19 15:14:34', '0000-00-00', 'Pan Zawadzki jet super gość', 1, 0),
-(4, '2023-04-24 14:03:12', '0000-00-00', 'olaf MA malego batonika', 3, 0);
+(1, '2023-04-19 15:11:55', '0000-00-00', 'Kocham Lige', 1, 0),
+(2, '2023-04-19 15:13:00', '0000-00-00', 'Kocham Lige', 1, 0),
+(3, '2023-04-19 15:14:34', '0000-00-00', 'Kocham Lige', 1, 0),
+(4, '2023-04-24 14:03:12', '0000-00-00', 'Kocham Lige', 3, 0);
 
 -- --------------------------------------------------------
 
@@ -63,8 +63,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `email`, `password`) VALUES
-(1, 'gowno@chuj.pl', '$argon2i$v=19$m=65536,t=4,p=1$cXgycXFDb3JOUzFDOVZUSg$UBYk/Fw40P4kcAKRjclF34BxVDONTMkHAfsHlLfdqv8'),
-(3, 'olaffajszer@wp.pl', '$argon2i$v=19$m=65536,t=4,p=1$dGtQcXpKRzRCYVpGMkFldQ$JuRIFob3t8o+sWFm8goECNeOk4im9qfVdwqOzyfUPuQ');
+(1, 'ksaweryszwarceneger@gmail.com', '$argon2i$v=19$m=65536,t=4,p=1$cXgycXFDb3JOUzFDOVZUSg$UBYk/Fw40P4kcAKRjclF34BxVDONTMkHAfsHlLfdqv8'),
+(3, 'neonet6987@gmail.com', '$argon2i$v=19$m=65536,t=4,p=1$dGtQcXpKRzRCYVpGMkFldQ$JuRIFob3t8o+sWFm8goECNeOk4im9qfVdwqOzyfUPuQ');
 
 -- --------------------------------------------------------
 

@@ -1,10 +1,12 @@
 {% include 'header.html.twig' %}
+
 <div id="pageContainer">
     <h1>{{pageTitle}}</h1>
     {# jeśli użytkownik jest zalogowany to pokaż #}
     {% if user is defined %}
     <div id="loggedUser">Zalogowany użytkownik: {{ user.getName() }} </div>
     {% endif %}
+<h2>CHUUJUJ</h2>
     {% for post in postArray %}
     <div id="post">
         <h2>{{ post.getTitle() }} </h2>

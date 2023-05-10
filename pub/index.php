@@ -1,26 +1,24 @@
 <?php
-require_once('./../src/config.php');
-//musi być wywołane zanim jakikolwiek content trafi do przeglądarki użytkownika
-session_start();
 
+require_once('./../src/config.php');
+session_start();
 use Steampixel\Route;
 
 Route::add('/', function() {
-    //strona wyświetlająca obrazki
     global $twig;
-    //pobierz 10 najnowszych postów
     $postArray = Post::getPage();
     $twigData = array("postArray" => $postArray,
                         "pageTitle" => "Strona główna",
                         );
-    //jeśli użytkownik jest zalogowany to przekaż go do twiga
     if(isset($_SESSION['user']))
+    {
         $twigData['user'] = $_SESSION['user'];
+    }
+        
     $twig->display("index.html.twig", $twigData);
 });
 
 Route::add('/upload', function() {
-    //strona z formularzem do wgrywania obrazków
     global $twig;
     $twigData = array("pageTitle" => "Wgraj mema");
     //jeśli użytkownik jest zalogowany to przekaż go do twiga
@@ -70,7 +68,7 @@ Route::add('/login', function() {
     if(isset($_POST['submit'])) {
         if(User::login($_POST['email'], $_POST['password'])) {
             //zalogowano poprawnie
-            header("Location: http://localhost/cms/pub");
+            header("Location: http://localhost/cms_Ksawery/pub");
         } else {
             //błąd logowania
             $twigData = array('pageTitle' => "Zaloguj użytkownika",
@@ -94,5 +92,5 @@ Route::add('/admin', function()  {
     }
 });
 
-Route::run('/cms/pub');
+Route::run('/cms_Ksawery/pub');
 ?>
