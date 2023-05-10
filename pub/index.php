@@ -40,7 +40,7 @@ Route::add('/upload', function() {
         Post::upload($_FILES['uploadedFile']['tmp_name'], $_POST['title'], $_POST['userId']);
     }
     //TODO: zmienić na ścieżkę względną
-    header("Location: http://localhost/cms/pub");
+    header("Location: http://localhost/cms_Ksawery/pub");
 }, 'post');
 
 Route::add('/register', function() {
